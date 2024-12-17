@@ -57,6 +57,12 @@ function Feedback() {
           >
             Build finish
           </button>
+          <button
+            className="button"
+            onClick={() => send({ type: 'error' })}
+          >
+            Error
+          </button>
         </div>
       )}
 
@@ -68,6 +74,12 @@ function Feedback() {
             onClick={() => send({ type: 'deployPre' })}
           >
             Anar al servidor
+          </button>
+          <button
+            className="button"
+            onClick={() => send({ type: 'error' })}
+          >
+            Error
           </button>
         </div>
       )}
@@ -81,6 +93,12 @@ function Feedback() {
           >
             User test ok
           </button>
+          <button
+            className="button"
+            onClick={() => send({ type: 'error' })}
+          >
+            Error
+          </button>
         </div>
       )}
 
@@ -92,6 +110,12 @@ function Feedback() {
             onClick={() => send({ type: 'deployPro' })}
           >
             Deploy Done
+          </button>
+          <button
+            className="button"
+            onClick={() => send({ type: 'error' })}
+          >
+            Error
           </button>
         </div>
       )}
