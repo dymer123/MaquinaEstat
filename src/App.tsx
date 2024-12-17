@@ -4,6 +4,9 @@ import { useMachine } from '@xstate/react';
 import { createBrowserInspector } from '@statelyai/inspect';
 import git from './img/git.png'; 
 import off from './img/off.png'; 
+import gradle from './img/Gradle.png'; 
+import JU from './img/Junit.png'; 
+import docker from './img/Docker.png'; 
 
 const { inspect } = createBrowserInspector({
   autoStart: false,
@@ -51,6 +54,7 @@ function Feedback() {
       {state.matches('testComplet') && (
         <div className="step">
           <h2>Build</h2>
+          <img src={gradle} alt="Parada" width={250} />
           <button
             className="button"
             onClick={() => send({ type: 'build' })}
@@ -69,6 +73,7 @@ function Feedback() {
       {state.matches('buildFinalitzat') && (
         <div className="step">
           <h2>DeployPre</h2>
+          <img src={docker} alt="Parada" width={250} />
           <button
             className="button"
             onClick={() => send({ type: 'deployPre' })}
@@ -87,6 +92,8 @@ function Feedback() {
       {state.matches('preDeploy') && (
         <div className="step">
           <h2>User Test</h2>
+          <img src={JU} alt="Parada" width={250} />
+
           <button
             className="button"
             onClick={() => send({ type: 'userTestPre' })}
@@ -105,6 +112,8 @@ function Feedback() {
       {state.matches('preTestComplet') && (
         <div className="step">
           <h2>Deploy Pro</h2>
+          <img src={docker} alt="Parada" width={250} />
+
           <button
             className="button"
             onClick={() => send({ type: 'deployPro' })}
