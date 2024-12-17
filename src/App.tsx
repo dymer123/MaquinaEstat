@@ -129,17 +129,7 @@ function Feedback() {
         </div>
       )}
 
-      {state.matches('deployFinalitzat') && (
-        <div className="step">
-          <h2>Done</h2>
-          <button
-            className="button"
-            onClick={() => send({ type: 'parada' })}
-          >
-            Parar
-          </button>
-        </div>
-      )}
+      
     </div>
   );
 }
